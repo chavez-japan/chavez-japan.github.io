@@ -1,4 +1,105 @@
+/* VARIABLES */
+/* GLOBAL */
+* {
+  box-sizing: border-box; }
+
+body, html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "EB Garamond", serif; }
+
+p {
+  line-height: 44px; }
+
+.wrapper {
+  display: flex;
+  max-width: 1800px;
+  justify-content: space-around;
+  margin: 0 auto; }
+  .wrapper .adv {
+    width: 212px;
+    background-color: grey; }
+
 /* STYLES */
+header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/japan-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 15px; }
+  header .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(49, 6, 46, 0.28); }
+  header .middle-section {
+    display: grid;
+    grid-template-columns: minmax(50px, 168px) auto minmax(50px, 168px);
+    grid-template-rows: auto;
+    flex: 1;
+    align-self: center;
+    align-items: center;
+    color: white;
+    z-index: 1; }
+    header .middle-section h2, header .middle-section h3 {
+      font-size: 19px; }
+    header .middle-section .content h1 {
+      font-size: 50px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      position: relative; }
+    header .middle-section .content h3 {
+      text-align: right; }
+    header .middle-section hr {
+      width: 90%;
+      height: 3px;
+      background-color: #fff;
+      border: none; }
+  header .header-icons {
+    text-align: center;
+    z-index: 1; }
+    header .header-icons img {
+      height: 22px;
+      margin-left: 17px; }
+
+#top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 15px;
+  box-shadow: 0 0 6px rgba(71, 63, 68, 0.86);
+  margin-bottom: 15px;
+  font-size: 25px; }
+  #top-nav ul {
+    display: flex; }
+    #top-nav ul li {
+      margin-right: 25px; }
+      #top-nav ul li a {
+        display: block;
+        padding: 5px 12px;
+        text-decoration: none;
+        color: black;
+        font-family: "EB Garamond", serif; }
+  #top-nav img {
+    height: 31px; }
+
+#intro {
+  display: flex;
+  margin: 0 60px; }
+  #intro img {
+    max-height: 250px; }
+
 main #main-profile {
   max-width: 250px;
   margin: 0 15px 15px 0;
