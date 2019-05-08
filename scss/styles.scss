@@ -12,20 +12,40 @@ body, html{margin: 0; padding: 0;}
 body{font-family: $normalFont; font-size: 20px;}
 h1, h2, h3, h4, h5, h6{font-family: $impFont;}
 p{line-height: 39px}
+.fab{color: #E1F9F9;}
 
 .wrapper{
     display: grid;
-    max-width: 1800px;
+    margin: 0 10px;
     justify-content: center;
-    margin: 0 auto;
-    grid-template-columns: minmax(150px, 300px) auto minmax(150px, 300px);
+
+    @media screen and (min-width: 1100px){
+        grid-template-columns: auto minmax(150px, 300px);
+        max-width: 1800px;
+        margin: 0 auto;
+    }
 
     .adv{
-        width: 300px; 
         height: auto;
+        margin-top: 30px;
         min-height: 150px;
         background-color: grey;
+
+        @media screen and (min-width: 1100px){
+            margin-top: 0;
+            width: 300px;
+        }
     }
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
 }
 
 .banner{
@@ -55,15 +75,9 @@ article{margin: 0 30px;}
 
 /* STYLES */
 // header
+header.banner{margin:0}
 header{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
     background-image: url('../images/japan-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
     padding: 15px;
 
     .middle-section{
@@ -101,52 +115,116 @@ header{
     }
 
     .header-icons{
+        display: flex;
+        justify-content: space-around;
+        max-width: 400px;
+        width: 50%;
+        min-width: 200px;
+        margin: 0 auto;
         text-align: center;
         z-index: 1;
 
-        img{height: 22px; margin-left: 17px;}
+        a{
+            padding: 10px; 
+            text-decoration: none; 
+            transition: background-color ease-in-out 0.8s,
+                        transform ease-in-out 0.8s;
+        }
+        a:hover{
+            box-shadow: 0px 3px 10px rgba(0,0,0,.25); 
+            transform: scale(2);
+            transition: background-color ease-in-out 0.8s,
+                        transform ease-in-out 0.8s;
+        }
+        .instagram:hover{background: #d6249f;}
+        .facebook:hover{background: rgb(60,90,153);}
+        .twitter:hover{background: rgb(0, 172, 237);}
+        .youtube:hover{background: rgb(187, 0, 0)}
     }
 }
 
 // nav
 #top-nav{
     display: flex;
+    position: sticky;
+    flex-direction: column;
+    top: 0;
+    background-color: #fff;
     justify-content: space-between;
-    padding: 6px 15px;
+    padding: 0 15px;
     box-shadow: 0 0 6px rgba(71, 63, 68, 0.86);
     margin-bottom: 15px;
     font-size: 25px;
+    z-index: 2;
+    @media screen and (min-width: 1100px){
+        flex-direction: row;
+    }
+
+    .mobile-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+
+        @media screen and (min-width: 1100px){
+            display: none;
+        }
+
+        #nav-button{
+            border: none;
+            background-color: transparent;
+        }
+    }
 
     ul{
-        display: flex;
+        display: none;
+        @media screen and (min-width: 1100px){
+            display: flex!important;
+        }
 
         li{
-            margin-right: 25px;
 
             a{
                 display: block;
-                padding: 5px 12px;
+                padding: 17px 22px;
                 text-decoration: none;
                 color: black;
                 font-family: $impFont;
             }
+            a:hover{
+                background-color: rgb(4, 117, 199); 
+                color: #fff;
+                text-shadow: 2px 2px rgb(1, 47, 107);
+                
+            }
         }
-    }
-
-    img{
-        height: 31px;
     }
 }
 
 // intro
 #intro {
-    display: flex;
     margin: 0 30px;
+    @media screen and (min-width: 1100px){
+        display: flex;
+    }
 
     #main-profile{
-        max-height: 250px;
-        margin: 0 15px 15px 0;
+        display: block;
+        max-height: 150px;
+        margin: 0 auto;
         border-radius: 50%;
+
+        @media screen and (min-width: 1100px){
+            max-height: 250px;
+            margin: 0 15px 15px 0;
+        }
+    }
+    div{
+        h3{
+            @media screen and (max-width: 1100px){
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -177,7 +255,7 @@ header{
 
     hr{
         border: 2px dashed #E1F9F9;
-        width: 345px;
+        max-width: 345px;
         height: 1px;
         min-width: 100px;
         margin: 0 15px;
@@ -190,16 +268,32 @@ header{
 .program-banner{
     background-image: url('../images/interest_festival.jpg');
     justify-content: space-evenly;
+    padding: 15px 0;
+    height: auto;
+
+    @media screen and (min-width: 1100px){
+        height: 23em;
+    }
 
     .overlay{background-color: rgba(75, 45, 74, 0.65);}
     article{
+        margin: 0 15px 15px;
         z-index: 1;
         text-align: center;
         color: white;
 
+        @media screen and (min-width: 1100px){
+            margin: 0;
+        }
+
         h4{
             font-size: 40px;
             font-weight: 700;
+            margin-bottom: 15px;
+
+            @media screen and (min-width: 1100px){
+                margin: 0;
+            }
         }
     }
 
@@ -213,4 +307,37 @@ header{
     }
 
     a:hover{background-color: white; color: black;}
+}
+
+// Thank You Section
+#thanks{
+    height: 12em;
+
+    .thanks-content{
+        text-align: center;
+        max-width: 1045px;
+        width: 90%;
+
+        h4{margin: 25px 0; font-size: 28px; font-weight: 800;}
+
+        .img-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            img{
+                max-height: 60px;
+                @media screen and (min-width: 1100px){
+                    max-height: 100px;
+                }
+            }
+        }
+    }
+}
+
+// Footer
+footer{
+    background-color: rgb(78, 78, 78);
+    padding: 15px 25px;
+    color: white;
 }
