@@ -1,3 +1,6 @@
+@font-face {
+  font-family: 'Simplifica';
+  src: url("../fonts/SIMPLIFICA Typeface.ttf"); }
 /* VARIABLES */
 /* GLOBAL */
 * {
@@ -15,16 +18,47 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "EB Garamond", serif; }
 
 p {
-  line-height: 44px; }
+  line-height: 39px; }
 
 .wrapper {
-  display: flex;
+  display: grid;
   max-width: 1800px;
-  justify-content: space-around;
-  margin: 0 auto; }
+  justify-content: center;
+  margin: 0 auto;
+  grid-template-columns: minmax(150px, 300px) auto minmax(150px, 300px); }
   .wrapper .adv {
-    width: 212px;
+    width: 300px;
+    height: auto;
+    min-height: 150px;
     background-color: grey; }
+
+.banner {
+  position: relative;
+  height: 23em;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(49, 6, 46, 0.28); }
+
+.impTitle {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 1em; }
+
+article {
+  margin: 0 30px; }
 
 /* STYLES */
 header {
@@ -37,13 +71,6 @@ header {
   background-position: center;
   position: relative;
   padding: 15px; }
-  header .overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(49, 6, 46, 0.28); }
   header .middle-section {
     display: grid;
     grid-template-columns: minmax(50px, 168px) auto minmax(50px, 168px);
@@ -96,13 +123,58 @@ header {
 
 #intro {
   display: flex;
-  margin: 0 60px; }
-  #intro img {
-    max-height: 250px; }
+  margin: 0 30px; }
+  #intro #main-profile {
+    max-height: 250px;
+    margin: 0 15px 15px 0;
+    border-radius: 50%; }
 
-main #main-profile {
-  max-width: 250px;
-  margin: 0 15px 15px 0;
-  border-radius: 50%; }
+.japan-banner {
+  background-image: url("../images/kyoto_japan.jpg"); }
+  .japan-banner .overlay {
+    background-color: rgba(75, 45, 74, 0.59); }
+  .japan-banner .japan-content {
+    z-index: 1;
+    display: flex; }
+    .japan-banner .japan-content .japan-card {
+      text-align: center; }
+      .japan-banner .japan-content .japan-card img {
+        width: 85px; }
+      .japan-banner .japan-content .japan-card h4 {
+        font-family: "Simplifica", "EB Garamond", serif;
+        text-transform: uppercase;
+        font-size: 35px;
+        color: #E1F9F9; }
+  .japan-banner hr {
+    border: 2px dashed #E1F9F9;
+    width: 345px;
+    height: 1px;
+    min-width: 100px;
+    margin: 0 15px;
+    border-radius: 5px;
+    align-self: center; }
+
+.program-banner {
+  background-image: url("../images/interest_festival.jpg");
+  justify-content: space-evenly; }
+  .program-banner .overlay {
+    background-color: rgba(75, 45, 74, 0.65); }
+  .program-banner article {
+    z-index: 1;
+    text-align: center;
+    color: white; }
+    .program-banner article h4 {
+      font-size: 40px;
+      font-weight: 700; }
+  .program-banner a {
+    z-index: 1;
+    color: white;
+    border: 2px solid #E1F9F9;
+    padding: 20px 25px;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s; }
+  .program-banner a:hover {
+    background-color: white;
+    color: black; }
 
 /*# sourceMappingURL=styles.css.map */
