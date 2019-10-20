@@ -12,280 +12,334 @@ body, html {
 
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 20px; }
+  font-size: 20px;
+  background-color: #FCF6F5; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "EB Garamond", serif; }
 
+h3 {
+  font-weight: 800;
+  font-size: 1.6rem; }
+
 p {
-  line-height: 39px; }
-
-.fab {
-  color: #E1F9F9; }
-
-.wrapper {
-  display: grid;
-  margin: 0 10px;
-  justify-content: center; }
-  @media screen and (min-width: 1100px) {
-    .wrapper {
-      grid-template-columns: auto minmax(150px, 300px);
-      max-width: 1800px;
-      margin: 0 auto; } }
-  .wrapper .adv {
-    height: auto;
-    margin-top: 30px;
-    min-height: 150px;
-    background-color: grey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white; }
-    @media screen and (min-width: 1100px) {
-      .wrapper .adv {
-        margin-top: 0;
-        width: 300px; } }
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 20px;
-  color: white; }
-
-.banner {
-  position: relative;
-  height: 23em;
-  margin: 2em 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  line-height: 39px;
+  font-size: 17px; }
 
 .overlay {
+  position: absolute !important;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(49, 6, 46, 0.28); }
+  z-index: 2 !important; }
 
-.impTitle {
-  font-size: 35px;
-  font-weight: 700;
-  margin-bottom: 1em; }
-
-article {
-  margin: 0 30px; }
-
-/* STYLES */
-header.banner {
-  margin: 0; }
-
-header {
-  background-image: url("../images/japan-1.jpg");
-  padding: 15px; }
-  header .middle-section {
-    display: grid;
-    grid-template-columns: minmax(50px, 168px) auto minmax(50px, 168px);
-    grid-template-rows: auto;
-    flex: 1;
-    align-self: center;
-    align-items: center;
-    color: white;
-    z-index: 1; }
-    header .middle-section h2, header .middle-section h3 {
-      font-size: 19px; }
-    header .middle-section .content h1 {
-      font-size: 50px;
-      letter-spacing: 8px;
-      text-transform: uppercase;
-      position: relative; }
-    header .middle-section .content h3 {
-      text-align: right; }
-    header .middle-section hr {
-      width: 90%;
-      height: 3px;
-      background-color: #fff;
-      border: none; }
-  header .header-icons {
-    display: flex;
-    justify-content: space-around;
-    max-width: 400px;
-    width: 50%;
-    min-width: 200px;
-    margin: 0 auto;
-    text-align: center;
-    z-index: 1; }
-    header .header-icons a {
-      padding: 10px;
-      text-decoration: none;
-      transition: background-color ease-in-out 0.8s, transform ease-in-out 0.8s; }
-    header .header-icons a:hover {
-      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-      transform: scale(2);
-      transition: background-color ease-in-out 0.8s, transform ease-in-out 0.8s; }
-    header .header-icons .pinterest:hover {
-      background: #bd081c; }
-    header .header-icons .instagram:hover {
-      background: #d6249f; }
-    header .header-icons .facebook:hover {
-      background: #3c5a99; }
-    header .header-icons .twitter:hover {
-      background: #00aced; }
-    header .header-icons .youtube:hover {
-      background: #bb0000; }
-
-#top-nav {
-  display: flex;
-  position: sticky;
-  flex-direction: column;
-  top: 0;
-  background-color: #fff;
-  justify-content: space-between;
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto 109px;
   padding: 0 15px;
-  box-shadow: 0 0 6px rgba(71, 63, 68, 0.86);
-  margin-bottom: 15px;
-  font-size: 25px;
-  z-index: 2; }
-  @media screen and (min-width: 1100px) {
-    #top-nav {
-      flex-direction: row; } }
-  #top-nav .mobile-nav {
+  overflow: hidden; }
+
+hr {
+  width: 169px;
+  border: solid 2px;
+  margin: 14.5px 0; }
+
+.line {
+  display: block;
+  max-width: 165px;
+  width: 100%;
+  height: 2px;
+  background-color: #FCF6F5; }
+  @media screen and (max-width: 1061px) {
+    .line {
+      display: none; } }
+
+.link-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #141414;
+  padding: 12px 37px;
+  border: 2px solid #141414; }
+
+.slider {
+  display: flex;
+  position: relative;
+  overflow: hidden; }
+  .slider .images {
+    width: 100%;
+    max-height: 350px; }
+    .slider .images img {
+      height: 100%; }
+  .slider .arrows {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0; }
-    @media screen and (min-width: 1100px) {
-      #top-nav .mobile-nav {
-        display: none; } }
-    #top-nav .mobile-nav #nav-button {
-      border: none;
-      background-color: transparent; }
-  #top-nav ul {
-    display: none; }
-    @media screen and (min-width: 1100px) {
-      #top-nav ul {
-        display: flex !important; } }
-    #top-nav ul li a {
-      display: block;
-      padding: 17px 22px;
-      text-decoration: none;
-      color: black;
-      font-family: "EB Garamond", serif; }
-    #top-nav ul li a:hover {
-      background-color: #0475c7;
-      color: #fff;
-      text-shadow: 2px 2px #012f6b; }
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    .slider .arrows .button {
+      color: #141414;
+      padding: 15px 19px;
+      background-color: #FCF6F5;
+      cursor: pointer; }
 
-#intro {
-  margin: 0 30px; }
-  @media screen and (min-width: 1100px) {
-    #intro {
-      display: flex; } }
-  #intro #main-profile {
-    display: block;
-    max-height: 150px;
-    margin: 0 auto;
-    border-radius: 50%; }
-    @media screen and (min-width: 1100px) {
-      #intro #main-profile {
-        max-height: 250px;
-        margin: 0 15px 15px 0; } }
-  @media screen and (max-width: 1100px) {
-    #intro div h3 {
-      text-align: center; } }
+.center {
+  text-align: center; }
 
-.japan-banner {
-  background-image: url("../images/kyoto_japan.jpg"); }
-  .japan-banner .overlay {
-    background-color: rgba(75, 45, 74, 0.59); }
-  .japan-banner .japan-content {
-    z-index: 1;
+/* STYLING */
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #FB727B;
+  z-index: 3; }
+  @media screen and (max-width: 580px) {
+    .fixed-nav {
+      padding: 0; } }
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #FCF6F5; }
+  @media screen and (max-width: 580px) {
+    .main-nav {
+      display: grid;
+      grid-template-columns: 40px auto 40px;
+      grid-template-rows: auto auto; } }
+  .main-nav h2 {
+    font-family: "EB Garamond", serif;
+    margin-left: 16px; }
+    @media screen and (max-width: 580px) {
+      .main-nav h2 {
+        margin: 10px 0;
+        font-size: 25px;
+        grid-column: 2 / 3; } }
+  .main-nav .nav-on {
+    display: block; }
+  .main-nav ul {
     display: flex; }
-    .japan-banner .japan-content .japan-card {
+    @media screen and (max-width: 580px) {
+      .main-nav ul {
+        display: none;
+        grid-row: 2 / 3;
+        grid-column: 1 / 4; } }
+    .main-nav ul li {
+      margin-right: 5px;
+      font-family: "Cormorant", sans-serif;
+      font-weight: 400; }
+      @media screen and (max-width: 580px) {
+        .main-nav ul li {
+          margin-right: 0;
+          text-align: center; } }
+      .main-nav ul li a {
+        display: block;
+        color: #FCF6F5;
+        text-decoration: none;
+        padding: 15px 16px; }
+    .main-nav ul li:hover {
+      background-color: #FCF6F5; }
+      .main-nav ul li:hover a {
+        color: #FB727B; }
+  .main-nav i {
+    display: none; }
+    @media screen and (max-width: 580px) {
+      .main-nav i {
+        display: block; } }
+
+#index-header {
+  background-color: #FB727B;
+  padding-top: 50px; }
+  #index-header #titleBanner {
+    margin: 50px auto;
+    max-width: 750px;
+    position: relative;
+    color: #FCF6F5;
+    text-align: center; }
+    #index-header #titleBanner p {
+      font-family: "EB Garamond", serif;
+      font-size: 21px; }
+    #index-header #titleBanner h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 3.5rem;
+      color: #FCF6F5;
       text-align: center; }
-      .japan-banner .japan-content .japan-card img {
-        width: 85px; }
-      .japan-banner .japan-content .japan-card h4 {
-        font-family: "Simplifica", "EB Garamond", serif;
-        text-transform: uppercase;
-        font-size: 35px;
-        color: #E1F9F9; }
-  .japan-banner hr {
-    border: 2px dashed #E1F9F9;
-    max-width: 345px;
-    height: 1px;
-    min-width: 100px;
-    margin: 0 15px;
-    border-radius: 5px;
-    align-self: center; }
-
-.program-banner {
-  background-image: url("../images/interest_festival.jpg");
-  justify-content: space-evenly;
-  padding: 15px 0;
-  height: auto; }
-  @media screen and (min-width: 1100px) {
-    .program-banner {
-      height: 23em; } }
-  .program-banner .overlay {
-    background-color: rgba(75, 45, 74, 0.65); }
-  .program-banner article {
-    margin: 0 15px 15px;
-    z-index: 1;
-    text-align: center;
-    color: white; }
-    @media screen and (min-width: 1100px) {
-      .program-banner article {
-        margin: 0; } }
-    .program-banner article h4 {
-      font-size: 40px;
-      font-weight: 700;
-      margin-bottom: 15px; }
-      @media screen and (min-width: 1100px) {
-        .program-banner article h4 {
-          margin: 0; } }
-  .program-banner a {
-    z-index: 1;
-    color: white;
-    border: 2px solid #E1F9F9;
-    padding: 20px 25px;
-    text-decoration: none;
-    transition: all ease-in-out 0.3s; }
-  .program-banner a:hover {
-    background-color: white;
-    color: black; }
-
-#thanks {
-  height: 12em; }
-  #thanks .thanks-content {
-    text-align: center;
-    max-width: 1045px;
-    width: 90%; }
-    #thanks .thanks-content h4 {
-      margin: 25px 0;
-      font-size: 28px;
-      font-weight: 800; }
-    #thanks .thanks-content .img-wrapper {
+      @media screen and (max-width: 580px) {
+        #index-header #titleBanner h1 {
+          font-size: 3rem; } }
+  #index-header .wrapper {
+    position: relative;
+    padding: 0; }
+    #index-header .wrapper * {
+      z-index: 1; }
+    #index-header .wrapper .overlay {
+      background: rgba(0, 0, 0, 0.25);
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-      #thanks .thanks-content .img-wrapper img {
-        max-height: 60px; }
-        @media screen and (min-width: 1100px) {
-          #thanks .thanks-content .img-wrapper img {
-            max-height: 100px; } }
+      justify-content: center;
+      align-items: center; }
+      #index-header .wrapper .overlay h2 {
+        color: #FCF6F5;
+        font-size: 3rem;
+        margin: 0 5px; }
+        @media screen and (max-width: 580px) {
+          #index-header .wrapper .overlay h2 {
+            font-size: 2.5rem; } }
+    #index-header .wrapper .image {
+      width: 100%;
+      height: 290px;
+      background-image: url("../images/header-banner.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+  #index-header #imageBanner {
+    position: relative;
+    padding: 0 10px; }
+  #index-header #imageBanner:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: #FCF6F5;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 0; }
+
+main hr {
+  border-color: #85DDD4; }
+
+#gilman .wrapper {
+  display: grid;
+  grid-template-columns: auto minmax(160px, 640px); }
+  @media screen and (max-width: 1061px) {
+    #gilman .wrapper {
+      display: block; } }
+  #gilman .wrapper hr {
+    border-color: #FB727B; }
+  #gilman .wrapper article {
+    margin-right: 28px; }
+    @media screen and (max-width: 1061px) {
+      #gilman .wrapper article {
+        margin-right: 0;
+        margin-bottom: 30px; } }
+    #gilman .wrapper article a {
+      margin-top: 50px; }
+  #gilman .wrapper #homepage {
+    flex-grow: 100; }
+    @media screen and (max-width: 1061px) {
+      #gilman .wrapper #homepage {
+        height: 13em; } }
+    #gilman .wrapper #homepage .button:nth-child(1) {
+      background-color: #FCF6F5; }
+    #gilman .wrapper #homepage .button:nth-child(2) {
+      background-color: #FB727B; }
+
+#posts {
+  background-color: #C9F9C2; }
+
+#posts .wrapper h3 {
+  text-align: center;
+  margin: 61px 0; }
+#posts .wrapper .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  #posts .wrapper .cards .card {
+    width: 50%;
+    max-width: 328px;
+    min-width: 300px; }
+    @media screen and (max-width: 1061px) {
+      #posts .wrapper .cards .card {
+        display: grid;
+        grid-template-rows: repeat(3, auto); }
+        #posts .wrapper .cards .card * {
+          margin: 0 0 15px !important; } }
+    #posts .wrapper .cards .card h6 {
+      display: inline-block;
+      padding: 10px 36px;
+      color: #FCF6F5;
+      margin: 27px 0;
+      text-shadow: 1px 1px 0 rgba(20, 20, 20, 0.4);
+      background-color: #1D9487;
+      font-weight: bold; }
+      @media screen and (max-width: 1061px) {
+        #posts .wrapper .cards .card h6 {
+          grid-row: 1 / 2;
+          width: max-content; } }
+    #posts .wrapper .cards .card h4 {
+      font-weight: bold;
+      font-size: 22px; }
+      @media screen and (max-width: 1061px) {
+        #posts .wrapper .cards .card h4 {
+          grid-row: 2 / 3; } }
+    #posts .wrapper .cards .card .post-image {
+      height: 224px;
+      background-position: center;
+      background-size: cover; }
+  #posts .wrapper .cards .card:nth-child(1) .post-image {
+    background-image: url("../images/japan-1.jpg"); }
+  #posts .wrapper .cards .card:nth-child(2) .post-image {
+    background-image: url("../images/japan-1.jpg"); }
+#posts .wrapper .link-button {
+  font-family: "EB Garamond", serif;
+  font-weight: bold;
+  margin: 61px auto;
+  color: #141414;
+  background-color: #FCF6F5;
+  border: none;
+  box-shadow: 0 3px 6px rgba(26, 26, 26, 0.35); }
+
+#testimonials {
+  display: none;
+  position: relative;
+  color: #FCF6F5; }
+  #testimonials .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1 !important; }
+  #testimonials h3 {
+    text-align: center;
+    margin: 66px 0; }
+
+#thanks .wrapper {
+  text-align: center; }
+  #thanks .wrapper h3 {
+    margin-bottom: 60px; }
+  #thanks .wrapper .th-img {
+    display: flex;
+    justify-content: space-around; }
+    @media screen and (max-width: 580px) {
+      #thanks .wrapper .th-img {
+        display: block; } }
+    #thanks .wrapper .th-img img {
+      height: 100px; }
+      @media screen and (max-width: 580px) {
+        #thanks .wrapper .th-img img {
+          width: 50vw;
+          height: auto;
+          margin-bottom: 20px; } }
+    #thanks .wrapper .th-img div img {
+      margin-bottom: 0 !important; }
 
 footer {
-  background-color: #4e4e4e;
-  padding: 15px 25px;
-  color: white; }
+  background-color: #141414;
+  text-align: center;
+  color: #FCF6F5;
+  padding: 44px; }
+  footer .footer-content {
+    margin: 25px 0 0;
+    font-size: 0.98rem; }
+  footer h6 {
+    font-family: "EB Garamond", serif; }
+  footer a {
+    color: #FCF6F5; }
+
+/*
+@media screen and (max-width: $tablet) { 
+    
+}
+*/
 
 /*# sourceMappingURL=styles.css.map */

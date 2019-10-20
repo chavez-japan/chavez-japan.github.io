@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Simplifica';
+    src: url('../fonts/SIMPLIFICA\ Typeface.ttf');
+}
+
+/* VARIABLES */
+$impFont: 'EB Garamond', serif;
+$normalFont: 'Raleway', sans-serif;
+$navFont: 'Cormorant', sans-serif;
+$mistyrose: #FB727B;
+$white: #FCF6F5;
+$black: #141414;
+$green: #C9F9C2;
+$darkGreen: #1D9487;
+$blue: #0D70D5;
+$bgBlue: #0062B3;
+$gold: #F9D41C;
+$tablet: 1061px;
+$mobile: 580px;
+
+/* GLOBAL */
+a{
+    color: $black;
+    text-decoration: none;
+}
+p, li{font-size: 20px; line-height: 35px;}
+
+h4,h5{
+    color: $blue;
+    font-weight: 800;
+}
+h4 {
+    font-size: 26px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h5{ font-size: 23px; margin: 25px 0; }
+
+.gilm-list {
+    li{margin-bottom: 20px}
+    li:nth-last-child(1){margin-bottom: 0}
+    i{margin-right: 15px; color: $blue}
+}
+
+#gilman-content {
+    display: flex;
+
+    div{flex: 1; margin-right: 37px;}
+    aside{
+        max-width: 288px;
+        a{display: block}
+    }
+    section {
+        border-bottom: 2px solid $black; 
+        padding-bottom: 60px;
+    }
+}
+
+
+/* CHANGED VARIABLES */
+.fixed-nav {
+    background-color: #000860;
+}
+
+/* NEW VARIABLES */
+// HEADER
+#program-header {
+    padding: 50px 0 0;
+    background-image: url(../images/lights.jpg);
+    overflow: hidden; 
+    color: $white;
+    background-size: cover;
+    
+    a{color: $white}
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 90px auto;
+    }
+
+    main {margin-bottom: 60px}
+    main p { 
+        line-height: 4.78rem;
+        margin: 60px 0; 
+    }
+    main a{
+        display: inline-block;
+        background-color: $gold; 
+        padding: 10px 15px;
+        color: $bgBlue;
+        font-family: $navFont;
+        font-weight: bold;
+    }
+    h1{
+        font-family: $navFont;
+        color: $gold;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 2rem;
+    }
+
+    aside {
+
+        .gil-selected {
+            background-color: $white;
+            color: $bgBlue;
+
+            hr{background-color: $blue}
+        }
+        a{
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 9px 17.5px;
+            width: 299px;
+            margin-bottom: 14px;
+
+            span{margin: auto}
+
+            hr{
+                position: absolute;
+                display: block;
+                margin: 0;
+                right: 17.5px;
+                width: 34px;
+                border-width: 1px;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+// DISCLAIMER
+#disclaimer {
+    text-align: center;
+    font-size: 15px;
+    padding: 24px 0;
+}
+
+//ASIDE
+#content-aside {
+    color: $black;
+
+    a {
+        padding: 20px;
+        border-top: 1px solid $black;
+
+        i{
+            margin-right: 10px;
+            color: $blue;
+        }
+    }
+}
+
+// VIDEO
+#video{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        display: table;
+        max-width: 450px;
+        padding: 53px 34px;
+        border: 1px solid $gold;
+        color: $bgBlue;
+        font-size: 23px;
+        font-weight: 100;
+    }
+}
+
+// ELIGIBILITY
+#eligibility {
+    
+}
+
+// SUBMISSION
+
+#app-deadline {
+
+    h5 {
+        grid-column: 1 / span 2;
+        text-align: center;
+        color: $black;
+    }
+
+    .box {
+        padding-bottom: 25px;
+        background: $white;
+        margin: 25px auto;
+        max-width: 600px;
+        box-shadow: 2px 2px 3px rgba(153,153,153,0.8);
+        border-radius: 9px;
+
+        h5 {
+            margin: 0;
+            margin-bottom: 25px;
+            background: #80C8EE;
+            color: $white;
+            padding: 25px;
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+        }
+
+        p { padding: 25px; }
+    }
+}
+
+article#tips {
+    h5 {
+        margin: 25px 0;
+        font-style: italic;
+    }
+
+    ul {
+        padding-left: 35px;
+
+        li { list-style: circle }
+    }
+}
+
+// LINKS
+section#links {
+    border-bottom: none!important;
+    padding-bottom: 0;
+    display: inline-flex;
+    flex-direction: column;
+
+    a { 
+        display: inline-block; 
+        line-height: 2.5rem; 
+        margin: 7.23px 0;
+    }
+}

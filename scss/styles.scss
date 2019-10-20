@@ -5,347 +5,429 @@
 /* VARIABLES */
 $impFont: 'EB Garamond', serif;
 $normalFont: 'Raleway', sans-serif;
+$navFont: 'Cormorant', sans-serif;
+$mistyrose: #FB727B;
+$white: #FCF6F5;
+$black: #141414;
+$green: #C9F9C2;
+$darkGreen: #1D9487;
+$tablet: 1061px;
+$mobile: 580px;
 
 /* GLOBAL */
 *{box-sizing: border-box}
 body, html{margin: 0; padding: 0;}
-body{font-family: $normalFont; font-size: 20px;}
+body{font-family: $normalFont; font-size: 20px; background-color: $white;}
 h1, h2, h3, h4, h5, h6{font-family: $impFont;}
-p{line-height: 39px}
-.fab{color: #E1F9F9;}
-
-.wrapper{
-    display: grid;
-    margin: 0 10px;
-    justify-content: center;
-
-    @media screen and (min-width: 1100px){
-        grid-template-columns: auto minmax(150px, 300px);
-        max-width: 1800px;
-        margin: 0 auto;
-    }
-
-    .adv{
-        height: auto;
-        margin-top: 30px;
-        min-height: 150px;
-        background-color: grey;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-
-        @media screen and (min-width: 1100px){
-            margin-top: 0;
-            width: 300px;
-        }
-
-
-    }
+h3 {
+    font-weight: 800;
+    font-size: 1.6rem;
 }
-
-.icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
-    color: white;
-}
-
-.banner{
-    position: relative;
-    height: 23em;
-    margin: 2em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay{
+p{line-height: 39px; font-size: 17px;}
+.overlay {
+    position: absolute!important;
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(49, 6, 46, .28);
+    z-index: 2!important;
 }
 
-.impTitle{font-size: 35px; font-weight: 700; margin-bottom: 1em;}
-article{margin: 0 30px;}
-
-/* STYLES */
-// header
-header.banner{margin:0}
-header{
-    background-image: url('../images/japan-1.jpg');
-    padding: 15px;
-
-    .middle-section{
-        display: grid;
-        grid-template-columns: minmax(50px ,168px) auto minmax(50px ,168px);
-        grid-template-rows: auto;
-        flex: 1;
-        align-self: center;
-        align-items: center;
-        color: white;
-        z-index: 1;
-
-        h2, h3{font-size: 19px;}
-
-        .content {
-
-            h1{
-                font-size: 50px;
-                letter-spacing: 8px;
-                text-transform: uppercase;
-                position: relative;
-            }
-    
-            h3{
-                text-align: right;
-            }
-        }
-        
-        hr {
-            width: 90%;
-            height: 3px;
-            background-color: #fff;
-            border: none;
-        }
-    }
-
-    .header-icons{
-        display: flex;
-        justify-content: space-around;
-        max-width: 400px;
-        width: 50%;
-        min-width: 200px;
-        margin: 0 auto;
-        text-align: center;
-        z-index: 1;
-
-        a{
-            padding: 10px; 
-            text-decoration: none; 
-            transition: background-color ease-in-out 0.8s,
-                        transform ease-in-out 0.8s;
-        }
-        a:hover{
-            box-shadow: 0px 3px 10px rgba(0,0,0,.25); 
-            transform: scale(2);
-            transition: background-color ease-in-out 0.8s,
-                        transform ease-in-out 0.8s;
-        }
-        .pinterest:hover{background: #bd081c;}
-        .instagram:hover{background: #d6249f;}
-        .facebook:hover{background: rgb(60,90,153);}
-        .twitter:hover{background: rgb(0, 172, 237);}
-        .youtube:hover{background: rgb(187, 0, 0)}
-    }
-}
-
-// nav
-#top-nav{
-    display: flex;
-    position: sticky;
-    flex-direction: column;
-    top: 0;
-    background-color: #fff;
-    justify-content: space-between;
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto 109px;
     padding: 0 15px;
-    box-shadow: 0 0 6px rgba(71, 63, 68, 0.86);
-    margin-bottom: 15px;
-    font-size: 25px;
-    z-index: 2;
-    @media screen and (min-width: 1100px){
-        flex-direction: row;
-    }
+    overflow: hidden;
+}
 
-    .mobile-nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
+hr {
+    width: 169px;
+    border: solid 2px;
+    margin: 14.5px 0;
+}
 
-        @media screen and (min-width: 1100px){
-            display: none;
-        }
+.line {
+    display: block;
+    max-width: 165px;
+    width: 100%;
+    height: 2px;
+    background-color: $white;
 
-        #nav-button{
-            border: none;
-            background-color: transparent;
-        }
-    }
-
-    ul{
+    @media screen and (max-width: $tablet) { 
         display: none;
-        @media screen and (min-width: 1100px){
-            display: flex!important;
+    }
+}
+
+.link-button {
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+    padding: 12px 37px;
+    border: 2px solid $black;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    .images{
+        width: 100%;
+        max-height: 350px;
+
+        img{height: 100%;}
+    }
+
+    .arrows {
+        display: flex;
+        align-self: flex-end;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        .button {
+            color: $black;
+            padding: 15px 19px;
+            background-color: $white;
+            cursor: pointer;
+        }
+    }
+}
+
+.center{text-align: center;} // in case some elements don't center
+
+/* STYLING */
+// Nav
+.fixed-nav {
+    position: fixed; 
+    width: 100%;
+    padding: 0 10px;
+    background-color: $mistyrose;
+    z-index: 3;
+
+    @media screen and (max-width: $mobile) {
+        padding: 0;
+    }
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: $white;
+
+    @media screen and (max-width: $mobile) {
+        display: grid;
+        grid-template-columns: 40px auto 40px;
+        grid-template-rows: auto auto;
+    }
+
+    h2 {
+        font-family: $impFont;
+        margin-left: 16px;
+        
+        @media screen and (max-width: $mobile) {     
+            margin: 10px 0;
+            font-size: 25px;
+            grid-column: 2 / 3;
+        }
+    }
+
+    .nav-on{display: block} 
+    ul {
+        display: flex;
+
+        @media screen and (max-width: $mobile) {     
+            display: none;
+            grid-row: 2 / 3;
+            grid-column: 1 / 4;
         }
 
         li{
+            margin-right: 5px;
+            font-family: $navFont;
+            font-weight: 400;
+
+            @media screen and (max-width: $mobile) {
+                margin-right: 0;
+                text-align: center;
+            }
 
             a{
                 display: block;
-                padding: 17px 22px;
+                color: $white;
                 text-decoration: none;
-                color: black;
-                font-family: $impFont;
+                padding: 15px 16px;
             }
-            a:hover{
-                background-color: rgb(4, 117, 199); 
-                color: #fff;
-                text-shadow: 2px 2px rgb(1, 47, 107);
-                
-            }
+        }
+
+        li:hover {
+            background-color: $white;
+
+            a{color: $mistyrose}
+        }
+    }
+
+    i{
+        display: none;
+        @media screen and (max-width: $mobile) {
+            display: block;
         }
     }
 }
 
-// intro
-#intro {
-    margin: 0 30px;
-    @media screen and (min-width: 1100px){
-        display: flex;
-    }
+// Header
+#index-header {
+    background-color: $mistyrose;
+    padding-top: 50px;
 
-    #main-profile{
-        display: block;
-        max-height: 150px;
-        margin: 0 auto;
-        border-radius: 50%;
+    #titleBanner {
+        margin: 50px auto;
+        max-width: 750px;
+        position: relative;
+        color: $white;
+        text-align: center;
 
-        @media screen and (min-width: 1100px){
-            max-height: 250px;
-            margin: 0 15px 15px 0;
-        }
-    }
-    div{
-        h3{
-            @media screen and (max-width: 1100px){
-                text-align: center;
-            }
-        }
-    }
-}
+        p{font-family: $impFont; font-size: 21px;}
 
-// japan intro
-.japan-banner{
-    background-image: url('../images/kyoto_japan.jpg');
-
-    .overlay{background-color: rgba(75, 45, 74, 0.59);}
-
-    .japan-content{
-        z-index: 1;
-        display: flex;
-
-        .japan-card{
+        h1 {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 3.5rem;
+            color: $white;
             text-align: center;
-            
-            img{
-                width: 85px;
-            }
-            h4{
-                font-family: 'Simplifica', $impFont;
-                text-transform: uppercase;
-                font-size: 35px;
-                color: #E1F9F9;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 3rem;
             }
         }
     }
 
-    hr{
-        border: 2px dashed #E1F9F9;
-        max-width: 345px;
-        height: 1px;
-        min-width: 100px;
-        margin: 0 15px;
-        border-radius: 5px;
-        align-self: center;
-    }
-}
+    .wrapper{
+        position: relative;
+        padding: 0;
 
-// outside
-.program-banner{
-    background-image: url('../images/interest_festival.jpg');
-    justify-content: space-evenly;
-    padding: 15px 0;
-    height: auto;
+        *{z-index: 1;}
 
-    @media screen and (min-width: 1100px){
-        height: 23em;
-    }
-
-    .overlay{background-color: rgba(75, 45, 74, 0.65);}
-    article{
-        margin: 0 15px 15px;
-        z-index: 1;
-        text-align: center;
-        color: white;
-
-        @media screen and (min-width: 1100px){
-            margin: 0;
-        }
-
-        h4{
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 15px;
-
-            @media screen and (min-width: 1100px){
-                margin: 0;
-            }
-        }
-    }
-
-    a{
-        z-index: 1;
-        color: white;
-        border: 2px solid #E1F9F9;
-        padding: 20px 25px; 
-        text-decoration: none;
-        transition: all ease-in-out 0.3s;
-    }
-
-    a:hover{background-color: white; color: black;}
-}
-
-// Thank You Section
-#thanks{
-    height: 12em;
-
-    .thanks-content{
-        text-align: center;
-        max-width: 1045px;
-        width: 90%;
-
-        h4{margin: 25px 0; font-size: 28px; font-weight: 800;}
-
-        .img-wrapper{
+        .overlay{
+            background: rgba(0,0,0,0.25);
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            
+            h2 {
+                color: $white;
+                font-size: 3rem;
+                margin: 0 5px;
 
-            img{
-                max-height: 60px;
-                @media screen and (min-width: 1100px){
-                    max-height: 100px;
+                @media screen and (max-width: $mobile) {
+                    font-size: 2.5rem;
+                }                
+            }
+        }
+        .image{
+            width: 100%;
+            height: 290px;
+            background-image: url('../images/header-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    #imageBanner{position: relative; padding: 0 10px}
+    #imageBanner:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: $white;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+// Main
+main {
+    hr{border-color: #85DDD4}
+}
+
+// Gilman
+#gilman .wrapper {
+    display: grid;
+    grid-template-columns: auto minmax(160px, 640px);
+
+    @media screen and (max-width: $tablet) {     
+        display: block;
+    }
+
+    hr{border-color: $mistyrose}
+    article{
+        margin-right: 28px;
+
+        @media screen and (max-width: $tablet) {  
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        a{margin-top: 50px;}
+    }
+
+    #homepage {
+        flex-grow: 100;
+
+        @media screen and (max-width: $tablet) {     
+            height: 13em;
+        }
+
+        .button:nth-child(1) {background-color: $white;}
+        .button:nth-child(2) {background-color: $mistyrose; }
+    }
+}
+
+// Posts
+#posts{background-color: $green;}
+#posts .wrapper {
+
+    h3{
+        text-align: center;
+        margin: 61px 0;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .card {
+            width: 50%;
+            max-width: 328px;
+            min-width: 300px;
+
+            @media screen and (max-width: $tablet) { 
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+
+                *{margin: 0 0 15px!important;}
+            }            
+
+            h6 {
+                display: inline-block;
+                padding: 10px 36px;
+                color: $white;
+                margin: 27px 0;
+                text-shadow: 1px 1px 0 rgba(20,20,20,.4);
+                background-color: $darkGreen;
+                font-weight: bold;
+
+                @media screen and (max-width: $tablet) { 
+                    grid-row: 1 / 2;
+                    width: max-content;
                 }
             }
+
+            h4 { 
+                font-weight: bold;
+                font-size: 22px;
+
+                @media screen and (max-width: $tablet) { 
+                    grid-row: 2 / 3;
+                }
+            }
+            
+            .post-image {
+                height: 224px;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        .card:nth-child(1) .post-image {background-image: url('../images/japan-1.jpg');}
+        .card:nth-child(2) .post-image {background-image: url('../images/japan-1.jpg');}
+    }
+
+    .link-button {
+        font-family: $impFont;
+        font-weight: bold;
+        margin: 61px auto;
+        color: $black; 
+        background-color: $white;
+        border: none;
+        box-shadow: 0 3px 6px rgba(26,26,26,.35);
+    }
+}
+
+// Student Testimonials
+#testimonials {
+    display: none; // for now
+    position: relative;
+    color: $white;
+
+    .overlay{background-color: rgba(0,0,0,0.5); z-index: -1!important;}
+    
+    h3{
+        text-align: center;
+        margin: 66px 0;
+    }
+}
+
+// Thank Banner
+#thanks { 
+    .wrapper {
+        text-align: center;
+        
+
+        h3{margin-bottom: 60px}
+        .th-img {
+            display: flex;
+            justify-content: space-around;
+
+            @media screen and (max-width: $mobile) { 
+                display: block;
+            }
+
+            img {
+                height: 100px;
+
+                @media screen and (max-width: $mobile) { 
+                    width: 50vw;
+                    height: auto;
+                    margin-bottom: 20px;
+                }
+            }
+
+            div img { margin-bottom: 0!important; }
         }
     }
 }
 
 // Footer
-footer{
-    background-color: rgb(78, 78, 78);
-    padding: 15px 25px;
-    color: white;
+footer{ 
+    background-color: $black;
+    text-align: center;
+    color: $white;
+    padding: 44px;
+
+    .footer-content {
+        margin: 25px 0 0;
+        font-size: 0.98rem;
+    }
+
+    h6 {
+        font-family: $impFont;
+    }
+    
+    a{
+        color: $white;
+    }
 }
+
+/*
+@media screen and (max-width: $tablet) { 
+    
+}
+*/
