@@ -16,6 +16,10 @@ $mobile: 580px;
 
 /* GLOBAL */
 *{box-sizing: border-box}
+::selection{
+    background-color: rgb(127, 181, 235);
+    color: $white;
+}
 body, html{margin: 0; padding: 0;}
 body{font-family: $normalFont; font-size: 20px; background-color: $white;}
 h1, h2, h3, h4, h5, h6{font-family: $impFont;}
@@ -72,10 +76,9 @@ hr {
     overflow: hidden;
 
     .images{
+        display: flex;
         width: 100%;
         max-height: 350px;
-
-        img{height: 100%;}
     }
 
     .arrows {
@@ -411,11 +414,6 @@ footer{
     text-align: center;
     color: $white;
     padding: 44px;
-
-    .footer-content {
-        margin: 25px 0 0;
-        font-size: 0.98rem;
-    }
 
     h6 {
         font-family: $impFont;
