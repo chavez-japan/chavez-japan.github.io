@@ -27,11 +27,21 @@ buttons.click(e => {
 // Info
 // if we are adding and removing classes, might as well
 // do a for loop to all h4's...
-const headers = $('#submission .container h4:lt(3)');
+const headers = $('#submission .container h4');
+const info = $('#submission .container div.submission-info');
 headers.click(e => {
-
+    let id = e.currentTarget;
+    let index = $(id).index();
+    index = Math.floor(index / 2);
+    resetClass();
+    if($(info).eq(index).css('display') == 'block') $(info).eq(index).slideUp;
+    else $(info).eq(index).slideDown();
 });
 
 function resetClass() {
-    
+    for(let i = 0; i < info.length; i++) {
+        if($(info).eq(i).css('display') == 'block') $(info).eq(i).slideUp();
+        //console.log(i);
+        //$(info).eq(i).css('display', 'none');
+    }
 }
