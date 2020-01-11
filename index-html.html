@@ -13,7 +13,20 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <?php include 'php-static/nav-bar.php' ?>
+    <!-- Fixed Nav Bar -->
+    <div class="fixed-nav">
+        <nav class="main-nav">
+            <h2>JSA19</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gilman/gilman.html">Gilman</a></li>
+                <!--<li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="about.html">About</a></li>-->
+            </ul>
+            <i class="fas fa-bars"></i>
+        </nav>
+    </div>
 
     <!-- Header -->
     <header id="index-header">
@@ -50,23 +63,25 @@
             <article>
                 <h3>Gilman Scholarship</h3>
                 <hr>
-                <p>Alumnus of the Gilman Scholarship which aided half of my 
+                <p>Currently a recipient of the Gilman Scholarship which aid half of my 
                     tuition and also opened new opportunities for my future plus a small
                     community of experienced students. Not everyone is eligible for this 
-                    scholarship, but perhaps you are! Come on by to see if you are eligible! You probably are.. 😊</p>
-                <a href="gilman/gilman.html" class="link-button">Learn More</a>
+                    scholarship, but perhaps you are! Come on by! 😊</p>
+                <a href="gilman.html" class="link-button">Learn More</a>
             </article>
             <div class="slider" id="homepage">
                 <div class="images">
-                    <img src="" alt="">
-                    <div class="arrows">
-                        <span class="button left">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span class="button right">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </div>
+                    <img src="images/japan.jpg" alt="tester" id="image-source">
+                    <!--img src="images/header-banner.jpg" alt="tester 2">
+                    <img src="images/interest_festival.jpg" alt="tester 3">-->
+                </div>
+                <div class="arrows">
+                    <span class="button left" id="slider-left">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="button right" id="slider-right">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -129,10 +144,10 @@
 
     <!-- Footer -->
     <footer>
-        <h6>This website was made with ❤ by <a href="www.joschavz.github.io">Jose Chavez</a></h6>
         <div class="footer-content">
-            <p class="footer-p">*updated on 11.20.19 for beta launch (still needs more work)</p>
+
         </div>
+        <h6>This website was made with ❤ by <a href="www.joschavz.github.io">Jose Chavez</a></h6>
     </footer>
 
     <!-- Scripts -->

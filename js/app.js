@@ -8,18 +8,19 @@ const images = [
     'nijo-sky.jpg',
     'taizo-temple.jpg'
 ];
-const buttons = $('.arrows span');
+const buttons = $('.arrows .button');
 let imageIndex = 0;
-const image = $('#image-source');
-image.attr('src', `images/jose/index-photos/${images[imageIndex]}`
-);
+const image = $('.images');
+const iClass = $('.button .fas');
+$(image).css('background-image', `url(images/jose/index-photos/${images[imageIndex]})`);
 
 // Arrows -> whichArrow takes in 2 values for bool
 buttons.click(e => {
-    const whichArrow = buttons.index(e.target);
+    let whichArrow = buttons.index(e.target);
+    if(whichArrow == -1) whichArrow = iClass.index(e.target);
     if(!whichArrow) (imageIndex == 0)? imageIndex = 4 : imageIndex--;
     else (imageIndex == 4)? imageIndex = 0: imageIndex++;
-    image.attr('src', `images/jose/index-photos/${images[imageIndex]}`);
+    $(image).css('background-image', `url(images/jose/index-photos/${images[imageIndex]})`);
 });
 
 /* FOR GILMAN WEBSITE */
@@ -45,3 +46,14 @@ function resetClass() {
         //$(info).eq(i).css('display', 'none');
     }
 }
+
+// Smooth scroll
+$('#content-aside a').click( e => {
+    e.preventDefault();
+
+    var pos = $( $(e.target).attr('href') ).offset().top - 120;
+
+    $("body, html").animate({
+		scrollTop: pos
+	}, 800 );
+});
