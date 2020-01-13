@@ -75,7 +75,7 @@ hr {
     position: relative;
     overflow: hidden;
 
-    .images{
+    .images {
         display: flex;
         width: 100%;
         max-height: 350px;
@@ -127,6 +127,7 @@ hr {
         display: grid;
         grid-template-columns: 40px auto 40px;
         grid-template-rows: auto auto;
+        padding: 5px 10px;
     }
 
     h2 {
@@ -140,20 +141,22 @@ hr {
         }
     }
 
-    .nav-on{display: block} 
-    ul {
-        display: flex;
+    ul.navOn{ display: block; }
 
-        @media screen and (max-width: $mobile) {     
-            display: none;
-            grid-row: 2 / 3;
-            grid-column: 1 / 4;
+    ul {
+        display: none;
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+
+        @media screen and (min-width: $mobile) {     
+            display: flex!important;
         }
 
         li{
             margin-right: 5px;
             font-family: $navFont;
             font-weight: 400;
+            line-height: normal;
 
             @media screen and (max-width: $mobile) {
                 margin-right: 0;
@@ -175,8 +178,15 @@ hr {
         }
     }
 
-    i{
+    #nav-button {
         display: none;
+        padding: 10px;
+        cursor: pointer;
+
+        i{
+            widows: 17.5px;
+        }
+
         @media screen and (max-width: $mobile) {
             display: block;
         }

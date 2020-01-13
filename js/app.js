@@ -1,3 +1,11 @@
+/** FOR MOBILE NAV BAR */
+const navButton = $('#nav-button');
+const navUl = $('.main-nav ul');
+navButton.click( e => {
+    if($(navUl).css('display') == 'none') navUl.slideDown('slow');
+    else navUl.slideUp('slow');
+});
+
 /** FOR INDEX */
 
 // SLIDER
@@ -42,8 +50,6 @@ headers.click(e => {
 function resetClass() {
     for(let i = 0; i < info.length; i++) {
         if($(info).eq(i).css('display') == 'block') $(info).eq(i).slideUp();
-        //console.log(i);
-        //$(info).eq(i).css('display', 'none');
     }
 }
 

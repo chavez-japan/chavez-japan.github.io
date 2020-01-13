@@ -174,12 +174,7 @@
     </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-
-        </div>
-        <h6>This website was made with ❤ by <a href="www.joschavz.github.io">Jose Chavez</a></h6>
-    </footer>
+    <?php include('../php-static/footer.php'); ?>
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/3c327ffdf3.js"></script>
